@@ -1,0 +1,76 @@
+<!DOCTYPE html5>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico">
+
+        <title>face detect demo project</title>
+        <!--<link rel="stylesheet" href="bootstrap.min.css">-->
+
+        <link href="{{ elixir('assets/css/app.css') }}" rel="stylesheet">
+        <link href="/assets/css/dashboard.css" rel="stylesheet">
+
+        <!--<link rel="stylesheet" href="styles.css">-->
+        <style>/*internal style sheets*/
+            p/*the selector*/
+            {
+                color: red;//one declaration;
+                font-size/*property*/: 1.5em;/*value*/
+                border: 1px solid #000;
+            }/*the declaration block/
+            // web browers ignore spaces and tabs, so feel free to add them to make your css more readable.
+            // place style right befor the closing </ head> tag, if you use javascript in your pages, add the javascript code after the style shee. Many JavaScript programms rely on css, so by adding your css first, you can make sure the javascript program has asll the information is needs to get its jod done
+            // @import(styles.css)
+            // @import("styles.css")
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">//what is data-toggle and data-target
+                        <span> Toggle navigation </span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                    </button>
+                    <a class="navbar-brand" href="#">Face Demo</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar">
+                    @foreach($links as $link)
+                    <ul class="nav nav-sidebar">
+                        @foreach($link as $li)
+                        <li class={{ $li['active'] }}><a href={{ $li['link']}}>{{ $li['name'] }}</a></li>
+                        @endforeach
+                    </ul>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            @yield('content')
+        <a class="docs-top" style="display: none;" href="#">Back to top</a>
+         </div>
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/application.js"></script>
+    </body>
+</html>

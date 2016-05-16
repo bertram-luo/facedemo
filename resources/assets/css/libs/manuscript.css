@@ -1,0 +1,47 @@
+.manuscript-sidebar>.nav{
+    padding-top : 52px;
+}
+.manuscript-sidebar .nav>li>a{
+    color: #999;
+    padding : 4px 10px;
+    font-size : 13px;
+    font-weight : 400;
+    border-left : 2px solid transparent;
+}
+.manuscript-sidebar .nav .nav>li>a{
+    padding-top : 1px;
+    padding-bottom : 1px;
+    padding-left : 20px;
+    font-size : 12px;
+}
+
+.manuscript-sidebar .nav>.active>a{
+    color: #563d7c;
+    text-decoration: none;
+    background-color:transparent;
+    border-left: 2px solid #563d7c;
+}
+.manuscript-sidebar .nav>li>a:hover{
+    border-left: 1px solid #563d7c;
+}
+
+.manuscript-sidebar .nav>.active>a{
+    font-weight:700;
+}
+.manuscript-sidebar .nav .nav>.active>a{
+    font-weight:500;
+}
+.manuscript-sidebar .nav ul.nav{
+    display : none; 
+}
+.manuscript-sidebar .nav>.active>ul.nav{
+    display : block; 
+}
+
+.manuscript-sidebar .nav ul.nav{
+    display : none;
+}
+.manuscript-sidebar .nav>.active>ul.nav{
+    display : block;
+}
+
