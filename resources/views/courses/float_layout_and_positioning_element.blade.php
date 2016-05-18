@@ -1,13 +1,242 @@
 @extends('layouts.app', ['links' => $links])
 
 @section('content')
-<div style="display:none" id="top"></div>
 <div class="container">
 <div class="row">
     <div class="col-md-9">
+    <section id="ch12">
+        <h1>Chapter 12: Introducint CSS Layouts</h1>
+        <div  id="ch12-section1"><div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Types of Web Page Layouts
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>fixed width. use fixed with like 960px</li>
+                        <li>liquid. user percentage</li>
+                        <li>Responsive web design. Instead of presenting a single layout for all devices, responsive web design compensates for di erent browser widths by changing its presentation. mainly use media queries</li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                </div>
+        </div></div>
+        <div  id="ch12-section2"><div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        How CSS Layout Works
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <h4>
+                        using div when no other semanticly more appropriate tag available
+                    </h4>
+                    <h4> HTML 5 Sectioning Elements </h4>
+                    <p>the new HTML5 elements are intended to add seman- tics to a web page</p>
+                    <h4>Techniques for CSS Layout</h4>
+                    <p>The vast majority of web pages use the CSS float property for layout</p>
+                </div>
+                <div class="panel-footer">
+                    p 250;
+                </div>
+        </div></div>
+        <div  id="ch12-section3"><div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Layout Strategies
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Start with Your Content</li>
+                        <li>Mobile First.Mobile First design is about starting with your content, but it’s also about getting rid of extraneous noise— including supplementary information that fits fine on a large desktop screen, but merely gets in the way on the smaller screen and detracts from the key information you’re hoping to deliver.</li>
+                        <li>css 3 lyaout options
+                            <ul>
+                                <li>multicolumn layout module</li>
+                                <li>flexible box <p>https://css-tricks.com/snippets/css/a-guide-to-flexbox/</p></li>
+                                <li>grid layout</li>
+                            </ul>
+                        </li>
+                        <li>Start with a Sketch</li>
+                        <li>Identify the Boxes</li>
+                        <li>Go with the Flow</li>
+                        <li>Remember Background Images</li>
+                        <li>Pieces of a Puzzle</li>
+                        <li>Layering Elements</li>
+                        <li>Don’t Forget Margins and Padding</li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    p 250;
+                </div>
+        </div></div>
+</section>
+    <hr>
+    <section id="ch13">
+        <h1>Chapter 13:Building Float- Based Layouts : p417</h1>
+        <div id="ch13-section0">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            Introduction
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <p>using float to place element sibe by side</p>
+                        <h4>A simple two-column design like Figure 13-1 in page 418</h4>
+                        <ol>
+                            <li> warp each column in a &lt;div&lg; tag with an ID or class attribute</li>
+                            <li> Float the sidebar &lt;div&gt; either right or left. (The HTML for the floated element must appear before the HTML for the element that wraps around it.)</li>
+                            <li>Set a width for the floated sidebar. pixel or percentage</li>
+                            <li>Add a left margin to the main content.(If the sidebar is shorter than the other content on the page, the text from the main column wraps underneath the sidebar, ruining the look of two side-by-side columns Figure 13-16 p452)</li>
+                        </ol>
+                    </div>
+                    <div class="panel-footer">
+                        p 140;
+                    </div>
+                </div>
+        </div>
+        <div id="ch13-section1">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            Applying Floats to Your Layouts : p421
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <h4>Expanding two-column to a three-column design</h4>
+                        <p>see FIGURE 13-3 in page 421</p>
+                        <h4>Floating All Columns</h4>
+                        <p>When you float all columns in a design, you need to pay close attention to the widths of each column. If the total width of all the columns is less than the space available—for example, if the browser window is smaller or the columns are placed inside another &lt;div&gt; with a set width—then the last column drops down below the others.<span class="text-todo"> (You can read a solution to this dropping float problem on page 480.)</span></p>
+                        <h4>Floats Within Floats: p424 figure 13-5</h4>
+                        <p class="text-info">By nesting floats inside floats, you can create some very complex designs</p>
+                    </div>
+                    <div class="panel-footer">
+                        p 140;
+                    </div>
+                </div>
+        </div>
+        <div id="ch13-section2">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            overcoming Float Problems : p425
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <h4 class="section">Clearing and Containing Floats: p426 Figure 13-6</h4>
+                        <p class="text-danger">To make the footer stay down below the sidebars, you can use the clera property. this property prevents an element from wrapping around floats.</p>
+                        <pre>footer {clear:both;}</pre>
+                        <p class="text-danger">Another problem occurs when you float one or more elements inside a non-floated containing tag like a &lt;div&gt; tag.</p>
+                        <p class="text-info">When the floated element is taller than the other content inside the div, it sticks out of the bottom of the enclosing element. </p>
+                        <ul>
+                            <li>Add a clearing element at the bottom of the containing div <pre>
+br.clear{clear:both;}
+</pre></li>
+                            <li>Float the containing element. P432: Figure 13-9</li>
+                            <li>Use overflow : hidden. it forces the containing block to expand and contain the floated elements.</li>
+                            <li>Use the Micro clear fix. <pre>
+.clear:after{
+    content : "";
+    display:table;
+    clear : both;
+}</pre></li>
+                        </ul>
+                        <h4 class="section">Creating Full-Height Columns</h4>
+                        <h5>wrapper background image for fixed width layout</h5>
+                        <h5>linear-gradient for percent laytou</h5>
+                        <h4 class="section">Preventing Float Drops p438 FIGURE 13-11</h4>
+                        <p>Suddenly, one of your columns simply drops down below the otehrs. it lokks like there's plenty of room for all the columns to coexist perfectly side by side, but they don't. You've got the dreaded float drop</p>
+                        <p>A floated column drops down because there's not enough room to fit it. box-model. the displayed with of any eement is a combination of its width left and right border sizes, left and right padding, and left and right margins.</p>
+                        <p class="class-info"> p437 example</p>
+                        <h5>Preventing Float Drops with box-sizing</h5>
+                        <p>The main culprit responsible for float drops is the wacky way browsers calculate the actual screen width for an element.</p>
+                        <ul>
+                            <li>The content-box value is how browsers normally work: The width of an element is the total of the left and right border thicknesses, left and right padding, and the CSS width property.</li>
+                            <li>The padding-box value tells a browser to include the left and right padding. In other words, the display width of an element is the total of the CSS width, and the left and right padding. It doesn’t include any borders around the element.</li>
+                            <li> Finally, the border-box property includes padding, borders, and CSS width. In general, this is the one you want to use. It keeps the math simple and helps prevent float drops, especially when you’re using percentage-based widths along with pixel-based units for the border width and padding:</li>
+                        </ul>
+
+                    </div>
+                    <div class="panel-footer">
+                        p 140;
+                    </div>
+                </div>
+        </div>
+    </section>
+    <hr>
+    <section id="ch14">
+        <h1>Chapter 14 Responsive Web Design</h1>
+        <div id="ch14-section1">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            Responsive Web Design Basics
+                        </h2>
+                    </div>
+                    <div class="panel-body"></div>
+                    <div class="panel-footer">
+                        p 140;
+                    </div>
+                </div>
+        </div>
+        <div id="ch14-section2">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                        Setting Up a Web Page for RWD
+                        </h2>
+                    </div>
+                    <div class="panel-body"></div>
+                    <div class="panel-footer">
+                        p 140;
+                    </div>
+                </div>
+        </div>
+        <div id="ch14-section3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            Media Queries
+                        </h2>
+                    </div>
+                    <div class="panel-body"></div>
+                    <div class="panel-footer">
+                        p 140;
+                    </div>
+                </div>
+        </div>
+        <div id="ch14-section4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            Flexible Grids
+                        </h2>
+                    </div>
+                    <div class="panel-body"></div>
+                    <div class="panel-footer">
+                        p 140;
+                    </div>
+                </div>
+        </div>
+        <div id="ch14-section5">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            Fluid Images
+                        </h2>
+                    </div>
+                    <div class="panel-body"></div>
+                    <div class="panel-footer">
+                        p 140;
+                    </div>
+                </div>
+        </div>
+    </section>
+    <hr>
         <section id="ch15">
-            <h1>Formatting Text</h1>
-            <hr>
+            <h1>Positioning element on a web page</h1>
             <div id="ch15-section0">
                 <h2>Introduction</h2>
                 <p>Web pages are much more fluid than printed pages. Once a magazine  rolls off the press, readers cannot change the page size or font size</p>
@@ -213,295 +442,47 @@ h1 img {
                     </div>
                 </div>
             </div>
-
-            <div id="ch15-section3">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            Use google font
-                        </h3>
-                    </div>
-                    <div class="panel-body"></div>
-                    <div class="panel-footer">
-                        p 153;
-                    </div>
-                </div>
-            </div>
-            <div id="ch15-section4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            Adding Color to Font
-                        </h3>
-                    </div>
-                    <div class="panel-body"></div>
-                    <div class="panel-footer">
-                        p 153;
-                    </div>
-                </div>
-            </div>
     </section>
-
-    <hr>
-
-    <section id="ch8">
-        <h1>Adding Graphics to Web Pages</h1>
-        <div class="panel panel-primary" id="ch8-section1">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    Discovering Css and the img tag
-                    border, padding, float, margins
-                </h3>
-            </div>
-            <div class="panel-body">
-                <h4>Types of Lists</h4>
-                unordered list
-                ordered list
-                <pre>
-                    list-style-type : square; // disc, circle, square, none;
-                    list-style-type : upper-alpha;//decimal, decimal-leading-zero, upper-alpha, lower-alpha, upper-roman, or lower-roman, none;
-                    li:nth-of-type(odd){
-                        list-style-type: circle;
-                    }
-                </pre>
-            </div>
-            <div class="panel-footer">
-                p 240;
-            </div>
-        </div>
-        <div class="panel panel-primary" id="ch8-section2">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    Adding Background images
-                </h3>
-            </div>
-            <div class="panel-body">
-                www.csszengarden.com
-                <pre>
-                    body{
-                       //absolute path: url(http://www. cosmofarmer.com/image/bg.gif)
-                    // root-relative path
-                    // document-relative path
-                        background-image : url(images/bg.gif);    
-                    }
-                </pre>
-            </div>
-            <div class="panel-footer">
-                p 250;
-            </div>
-        </div>
-        <div class="panel panel-primary" id="ch8-section3">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    Controlling Repetition
-                </h3>
-            </div>
-            <div class="panel-body">
-                background-image: radial-gradient(20% 40%, circle, red 20%, orange 80%, yellow);
-            </div>
-            <div class="panel-footer">
-                p 250;
-            </div>
-        </div>
-        <div class="panel panel-primary" id="ch8-section4">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    Positioning a Background Image
-                </h3>
-            </div>
-            <div class="panel-body">
-                <pre>
-        // keywords
-                    body{
-                    background-image: url (bg_pacgte.jpg);
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    }
-        //Ifyou’vedecidedtotileanimage(bysettingbackground-repeattooneofthevalueslistedin the previous section), then the background-position property controls the starting point of the first tile.
-        // precise value
-                     background-position: 5px 8px;
-
-        //percentage values
-                    background-position: 50% 50%;
-        // Fixing an Image in Place
-                    body {
-                        background-image: url(images/logo.gif);
-                        background-repeat: no-repeat;
-                        background-attachment: fixed;
-                    }// like a logo which should always display relative to the browser window
-        // Defining the origin and clipping for a background
-           border-box places the image in the upper-left corner of the area assigned to the border (top-left in Figure 8-10).
-                  padding-box places the image in the upper-left corner of the area assigned to the padding (top-middle in Figure 8-10). This is normally where a browser places a background image.
-                     content-box places the image in the upper-right corner of the area assigned to the content (top-right in Figure 8-10).
-                     see page 253;
-
-            background-size : 100px 200px;
-            background-size : 100px auto; // browser calculate the height while keeping ratio
-            background-size : contain;
-            background-size : cover;
-            background-size : 100% auto;//usefull in responsive design
-                </pre> 
-        </div>
-        <div class="panel-footer">
-            p 250;
-        </div>
-    </div>
-    <div class="panel panel-primary" id="ch8-section5">
-        <div class="panel-heading">
-            <h3 class="panel-title">
-                using background property shorthand
-            </h3>
-        </div>
-        <div class="panel-body">
-            <pre>
-                    body{
-                        background : url(bulleye.gif) center center no-repeat fixed #fff;        
-                    }
-                    // the following two is equivalent
-                    background: url(image/bullseye.gif);
-                    background: url(image/bullseye.gif) scroll left top repeat transparent;
-
-                    // yellow is overwrited 
-                    background-color: yellow;
-                    background: url(image/bullseye.gif) no-repeat;
-                    // overwrite default color with yellow
-                    background: url(image/bullseye.gif) no-repeat;
-                    background-color: yellow;
-                </pre>
-    </div>
-    <div class="panel-footer">
-        p 250;
-    </div>
-</div>
-
-
-
-<div class="panel panel-primary" id="ch8-section6">
-    <div class="panel-heading">
-        <h3 class="panel-title">
-            Using multiple background image
-        </h3>
-    </div>
-    <div class="panel-body">
-        <pre>
-                background-image: url(scrollTop.jpg),
-                                  url(scrollBottom.jpg),
-                                  url(scrollMiddle.jpg);
-                background-repeat:  no-repeat,
-                                    no-repeat,
-                                    repeat-y;
-
-                background: url(scrollTop.jpg) center top no-repeat,
-                            url(scrollBottom.jpg) center bottom no-repeat,
-                            url(scrollMiddle.jpg) center top repeat-y;
-            </pre>
-</div>
-<div class="panel-footer">
-    p 250;
-</div>
-    </div>
-
-    <div class="panel panel-primary" id="ch8-section7">
-        <div class="panel-heading">
-            <h3 class="panel-title">
-                Utilizing Gradient Background
-            </h3>
-        </div>
-        <div class="panel-body">
-            <h4>
-                linear gradient
-            </h4>
-            <pre>
-                background-image: linear-gradient(left,black,white);;
-                background-image: linear-gradient(top left,black,white);
-                //degree representation
-                background-image: linear-gradient(45deg, rgb(0,0,0), rgb(204,204,204));
-            </pre>
-            <h4>color stop</h4>
-            <pre>
-                background-image: linear-gradient(left, black, white, black);// p262
-                background-image: linear-gradient(left, black, rgb(255,255,255), #FFFFFF,HSL(0,0,0%));// mixing color representation
-                background-image: linear-gradient(left, #900, #FC0 10%, #FC0 90%, #900);// specify color position
-                background-image: linear-gradient(left, #900 20%, #FC0 30%, #FC0 70%, #900 80%);// specify when to start color transition. left to 20% is #900;
-            </pre>
-            <h4>VENDOR PREFIXES AND INTERNET EXPLORER SUPPORT</h4>
-            <pre>
-                //vendore prefix 
-                background-image: -webkit-linear-gradient(left,black,white);
-                background-image: -moz-linear-gradient(left,black,white);
-                background-image: -o-linear-gradient(left,black,white);
-                background-image: linear-gradient(left,black,white);
-                //pre ie9
-                background-color: #FC0;
-                background-image: -webkit-linear-gradient(left, #900, #FC0, #900);
-                background-image: -moz-linear-gradient(left, #900, #FC0, #900);
-                background-image: -o-linear-gradient(left, #900, #FC0, #900);
-                background-image: linear-gradient(left, #900, #FC0, #900);
-                // prevent from showing background-color when background is set with alpha
-                background-color: #FC0;
-                background: -webkit-linear-gradient(left, rgba(153,0,0,.5), #FC0,
-             rgba(153,0,0,.5));
-                background: -moz-linear-gradient(left, rgba(153,0,0,.5),#FC0,rgba(153,0,0,.5));
-                background: -o-linear-gradient(left, rgba(153,0,0,.5), #FC0,
-                rgba(153,0,0,.5));
-                background: linear-gradient(left, rgba(153,0,0,.5), #FC0, rgba(153,0,0,.5));
-            </pre>
-            <h4>Repeating Linear Gradients : p265</h4>
-            <pre>
-                background-image: repeating-linear-gradient(bottom left, #900 20px, #FC0 30px,#900 40px)
-                background-image: repeating-linear-gradient(45deg, #900 0, #900 10px, #FC0 10px, #FC0 20px);// without transition. just solid lines;
-            </pre>
-            <h4>Radial Gradients : p266</h4>
-            circle or elliptical
-            <pre>
-                background-image: radial-gradient(red, blue);// fit the containing element
-                background-image: radial-gradient(circle, red, blue);// specify 形状
-                background-image: radial-gradient(20% 40%, circle, red, blue); // specify starting point
-                //controlling size of the radial-gradient  : p268 figure 8-17
-                background-image: radial-gradient(20% 40%, circle closest-side, red, blue);
-                background-image: radial-gradient(20% 40%, circle closest-corner, red,blue);// may overflow
-                background-image:  radial-gradient(20% 40%, circle farthest-side, red, blue);
-                background-image:  radial-gradient(20% 40%, circle farthest-corner, red,blue);
-                //color stop
-                background-image: radial-gradient(20% 40%, circle, red 20%, orange 80%, yellow);
-            </pre>
-        </div>
-        <div class="panel-footer">
-            p 250;
-        </div>
-    </div>
-</section>
-
-
-
     </div>
 
     <div class="col-md-3 manuscript-sidebar" id="myScrollspy">
-        <ul class="nav nav-stacked" data-offset-top="120" data-spy="affix">
+        <ul class="nav nav-stacked" data-offset-top="80" data-spy="affix">
             <li>
-                <a href="#ch15">chap 15: Positioning Elment On a Web Page</a>
+                <a href="#ch12">chapter 12: Introducint CSS Layout</a>
+                <ul class="nav nav-stacked">
+                    <li><a href="#ch12-section1">Types of Web Page Layouts</a></li>
+                    <li><a href="#ch12-section2">Start with a Sketch</a></li>
+                    <li><a href="#ch12-section3">Layout Strategies</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#ch13">chapter 13: Building Float Based Layouts</a>
+                <ul class="nav nav-stacked">
+                    <li><a href="#ch13-section0">Introduction</a></li>
+                    <li><a href="#ch13-section1">Applying Floats to Your Layouts</a></li>
+                    <li><a href="#ch13-section2">Overcoming FLoat Problems</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#ch14">chapter 14: Responsive Web Design</a>
+                <ul class="nav nav-stacked">
+                    <li><a href="#ch14-section1">Responsive Web Design Basics</a></li>
+                    <li><a href="#ch14-section2">Setting Up a Web Page for RWD</a></li>
+                    <li><a href="#ch14-section3">Media Queries</a></li>
+                    <li><a href="#ch14-section4">Flexible Grids</a></li>
+                    <li><a href="#ch14-section5">Fluid Images</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#ch15">chapter 15: Positioning Elment On a Web Page</a>
                 <ul class="nav nav-stacked"> 
                     <li><a href="#ch15-section0">Introduction</a></li>
                     <li><a href="#ch15-section1">How Positioning property works</a></li>
                     <li><a href="#ch15-section2">Powerful Positioning Strategies</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="#ch8">chapter 8 Adding Graphics to Web Pages</a>
-                <ul class="nav nav-stacked">
-                    <li><a href="#ch8-section1">Discovering Css and the img tag</a></li>
-                    <li><a href="#ch8-section2">Adding Background images</a></li>
-                    <li><a href="#ch8-section3">Control Repetition</a></li>
-                    <li><a href="#ch8-section4">Positioning a Background Image</a></li>
-                    <li><a href="#ch8-section5">Using Background Property Shorthand</a></li>
-                    <li><a href="#ch8-section6">Using Multiple Background Images</a></li>
-                    <li><a href="#ch8-section7">Utilizing Gradient Backgrounds</a></li>
-                    <li><a href="#ch8-section8">Applying Easy Gradients with Colorzilla</a></li>
-                </ul>
-            </li>
         </ul>
     </div>
-
 </div>
         </div>
 

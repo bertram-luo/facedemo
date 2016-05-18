@@ -33,7 +33,7 @@ class Controller extends BaseController
         //$this->viewName[0][4] = "courses.test";
         $this->viewName[1][0] = "courses.ss_and_selector";
         $this->viewName[1][1] = "courses.ss_and_selector";
-        $this->viewName[2][0] = "courses.ss_and_selector";
+        $this->viewName[2][0] = "courses.basic_js";
         $this->viewName[3][0] = "courses.ss_and_selector";
         $this->viewName[3][1] = "courses.ss_and_selector";
         $this->viewName[3][2] = "courses.ss_and_selector";

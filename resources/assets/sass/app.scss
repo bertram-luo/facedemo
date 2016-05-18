@@ -4,3 +4,30 @@ $font-family-sans-serif: 'Lato', sans-serif;
 .dummy{
   border: #fff 3px;
 }
+
+.text-todo{
+    color : #ff0000;
+}
+
+h1, h2, h3, h4, h5, h6, h7{
+    text-align : center;
+    line-height : 150%;
+}
+
+p{
+    font-size : 1.2em !important;
+}
+
+.section{
+    border-bottom : 1px solid #d5d5d5;
+}
+
+section{
+    padding-top:50px;
+    margin-top : -50px;
+}
+
+div[id^="ch"]{
+    padding-top:50px;
+    margin-top : -50px;
+}

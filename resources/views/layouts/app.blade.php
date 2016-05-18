@@ -14,6 +14,7 @@
         <link href="{{ elixir('assets/css/app.css') }}" rel="stylesheet">
         <link href="/assets/css/dashboard.css" rel="stylesheet">
         <link href="/css/libs.css" rel="stylesheet">
+        <a name="top"></a>
 
         <!--<link rel="stylesheet" href="styles.css">-->
         <style>
