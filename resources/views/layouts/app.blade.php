@@ -13,7 +13,7 @@
 
         <link href="{{ elixir('assets/css/app.css') }}" rel="stylesheet">
         <link href="/assets/css/dashboard.css" rel="stylesheet">
-        <link href="/css/libs.css" rel="stylesheet">
+        <link href="/assets/css/libs.css" rel="stylesheet">
 
         <!--<link rel="stylesheet" href="styles.css">-->
         <style>
