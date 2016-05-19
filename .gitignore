@@ -5,3 +5,5 @@ Homestead.yaml
 Homestead.json
 /storage
 /public/build
+/public/uploads
+/public/log
