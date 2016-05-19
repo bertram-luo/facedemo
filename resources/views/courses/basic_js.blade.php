@@ -1,4 +1,4 @@
-@extends('layouts.app', ['links' => $links]);
+@extends('layouts.app', ['links' => $links])
 
 @section('content')
 <div class="container">
@@ -9,9 +9,10 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <h3>Demo of Event Handling</h3>
+                        </div>
+                        <div class="panel-body">
                             <p id="timestamp"> </p>
                         </div>
-                        <div class="panel-body"></div>
                         <div class="panel-footer"></div>
                     </div>
                 </div>
@@ -29,5 +30,20 @@
 </div>
 
 <script>
-var timestamp = document.getElementById("");
+window.onload = function(){
+    var timestamp = document.getElementById("timestamp"); // document object
+    timestamp.style.backgroundColor = "yellow"; // change style
+    if (timestamp.firstChild == null){
+        timestamp.appendChild(document.createTextNode(new Date().toString()));
+    }
+    timestamp.onclick = function(){ // event handling
+        this.innerHTML = new Date().toString();
+    }
+    function updateTime(){
+        timestamp.innerHTML = new Date().toString(); // control content
+        setTimeout(updateTime, 10000);
+    }
+    updateTime();
+}
 </script>
+@endsection
