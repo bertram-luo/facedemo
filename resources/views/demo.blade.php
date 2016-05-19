@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="above_container vertical_margin" style="padding: 8px;">
-                <form class="form-inline" action="#" enctype="multipart/form-data" method="post">
+                <form id="demo" class="form-inline" action="#" enctype="multipart/form-data" method="post">
                     {{ csrf_field()}}
                     <div class="form-group">
                         <label for="file_upload"> File </label>
@@ -91,4 +91,8 @@
         </div>
     </div>
 
+@endsection
+
+@section('scripts.footer')
+<script src="/assets/js/detectdemo.js"></script>
 @endsection

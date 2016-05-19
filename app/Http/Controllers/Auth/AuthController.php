@@ -38,6 +38,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
+        parent::__construct();
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
 
@@ -67,13 +68,13 @@ class AuthController extends Controller
 
         //$data['verification_code']  = $user->verification_code;
 
-        Mail::send('emails.welcome', $data, function($message) use ($data)
-        {
-            $message->from('luopo10164108@gmail.com', "polo");
-            $message->subject("Welcome to site name");
-            //$message->to($data['email']);
-            $message->to('12110240007@fudan.edu.cn');
-        });
+        //Mail::send('emails.welcome', $data, function($message) use ($data)
+        //{
+            //$message->from('luopo10164108@gmail.com', "polo");
+            //$message->subject("Welcome to site name");
+            ////$message->to($data['email']);
+            //$message->to('12110240007@fudan.edu.cn');
+        //});
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],

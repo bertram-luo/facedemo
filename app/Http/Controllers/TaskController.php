@@ -13,8 +13,8 @@ class TaskController extends Controller
   protected $tasks;
 
   public function __construct(TaskRepository $tasks){
-      parent::__construct();
       $this->middleware('auth');
+      parent::__construct();
       $this->tasks = $tasks;
   }
   public function index(Request $request){
