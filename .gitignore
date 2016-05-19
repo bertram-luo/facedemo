@@ -3,7 +3,9 @@
 /public/storage
 Homestead.yaml
 Homestead.json
-/storage
+/storage/cache/*
+/storage/session/*
+/storage/views/*
 /public/build
 /public/uploads
 /public/log
