@@ -14,7 +14,6 @@
         <link href="{{ elixir('assets/css/app.css') }}" rel="stylesheet">
         <link href="/assets/css/dashboard.css" rel="stylesheet">
         <link href="/css/libs.css" rel="stylesheet">
-        <a name="top"></a>
 
         <!--<link rel="stylesheet" href="styles.css">-->
         <style>
@@ -25,6 +24,7 @@
         </style>
     </head>
     <body data-spy="scroll" data-target="#myScrollspy" style="position: relative;" >
+        <a name="top"></a>
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -34,7 +34,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Face Demo</a>
+                    <a class="navbar-brand" href="/">Face Demo</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" >
@@ -52,8 +52,16 @@
                             </ul>
                         </li>
                             @endif
-                        <li><a href="/tasks">tasks</a></li>
                         <li><a href="/demo">demo</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Charts</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/charts/lineChart">line chart</a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
@@ -61,6 +69,7 @@
                         <li><a href="{{ url('/login') }}">Login</a></li>
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
+                        <li><a href="/tasks">tasks</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 Hello, {{ Auth::user()->name }} <span class="caret"></span>
@@ -76,7 +85,7 @@
             </div>
         </nav>
 
-                    @yield('content')
+        @yield('content')
         <script src="/assets/js/jquery.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>
         <script src="/assets/js/application.js"></script>
