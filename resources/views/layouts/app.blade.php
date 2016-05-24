@@ -14,7 +14,6 @@
         <link href="{{ elixir('assets/css/app.css') }}" rel="stylesheet">
         <link href="/assets/css/dashboard.css" rel="stylesheet">
         <link href="/assets/css/libs.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css">
         {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
         <!--<link rel="stylesheet" href="styles.css">-->

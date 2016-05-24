@@ -9,3 +9,4 @@ Homestead.json
 /public/build
 /public/uploads
 /public/log
+*.swp
