@@ -14,6 +14,8 @@
         <link href="{{ elixir('assets/css/app.css') }}" rel="stylesheet">
         <link href="/assets/css/dashboard.css" rel="stylesheet">
         <link href="/assets/css/libs.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css">
+        {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
         <!--<link rel="stylesheet" href="styles.css">-->
         <style>
@@ -52,11 +54,20 @@
                             </ul>
                         </li>
                             @endif
-                        <li><a href="/demo">demo</a></li>
+                        <li><a href="/facedetect">demo</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Charts</a>
                             <ul class="dropdown-menu">
                                 <li><a href="/charts/lineChart">line chart</a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Flyers</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/flyers/home">flyers</a></li>
                                 <li><a href=""></a></li>
                                 <li><a href=""></a></li>
                                 <li><a href=""></a></li>
@@ -89,6 +100,8 @@
         <script src="/assets/js/jquery.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>
         <script src="/assets/js/application.js"></script>
+        <script src="/assets/js/libs.js"></script>
+        {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
         @yield('scripts.footer')
     </body>
 </html>

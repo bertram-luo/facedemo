@@ -13,7 +13,12 @@ class Controller extends BaseController
     use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
     protected $data;
     protected $viewName;
+    protected $user;
     public function __construct(){
+        $this->user = \Auth::user();
+        view()->share('signedIn', \Auth::check());
+        view()->share('user', $this->user);
+
         $this->data['links'][0][0] = array('name' =>"introduction_css and selector", 'active' => "", 'link' => "/courses/lecture/0");
         $this->data['links'][0][1] = array('name' => "inheritance, cascade and box model", "active" => "", 'link' => "/courses/lecture/1");
         $this->data['links'][0][2] = array('name' => "text and images", 'active' => "", 'link' => "/courses/lecture/2");

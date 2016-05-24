@@ -26,4 +26,16 @@ class User extends Authenticatable
     public function tasks(){
         return $this->hasMany(Task::class);
     }
+
+    public function owns($relation){
+        return $relation->user_id == $this->id;
+    }
+    public function flyers(){
+        return $this->hasMany(Flyer::class);
+    }
+    public function publish(Flyer $flyer){
+        $this->flyers()->save($flyer);
+        return $flyer;
+    }
+
 }

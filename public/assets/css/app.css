@@ -5750,6 +5750,9 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.form-control {
+  height: 39px; }
+
 .dummy {
   border: #fff 3px; }
 
@@ -5763,6 +5766,9 @@ h1, h2, h3, h4, h5, h6, h7 {
 p {
   font-size: 1.2em !important; }
 
+p::first-letter {
+  text-transform: uppercase; }
+
 .section {
   border-bottom: 1px solid #d5d5d5; }
 
@@ -5773,5 +5779,11 @@ section {
 div[id^="ch"] {
   padding-top: 60px;
   margin-top: -60px; }
+
+img {
+  max-width: 100%; }
+
+.gallery__image {
+  margin-bottom: 1em; }
 
 /*# sourceMappingURL=app.css.map */

@@ -2,136 +2,136 @@
 
 @section('content')
 <div class="container">
-<div class="row">
-    <div class="col-md-9">
-    <section id="ch12">
-        <h1>Chapter 12: Introducint CSS Layouts</h1>
-        <div  id="ch12-section1"><div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        Types of Web Page Layouts
-                    </h3>
-                </div>
-                <div class="panel-body">
-                    <ul>
-                        <li>fixed width. use fixed with like 960px</li>
-                        <li>liquid. user percentage</li>
-                        <li>Responsive web design. Instead of presenting a single layout for all devices, responsive web design compensates for di erent browser widths by changing its presentation. mainly use media queries</li>
-                    </ul>
-                </div>
-                <div class="panel-footer">
-                </div>
-        </div></div>
-        <div  id="ch12-section2"><div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        How CSS Layout Works
-                    </h3>
-                </div>
-                <div class="panel-body">
-                    <h4>
-                        using div when no other semanticly more appropriate tag available
-                    </h4>
-                    <h4> HTML 5 Sectioning Elements </h4>
-                    <p>the new HTML5 elements are intended to add seman- tics to a web page</p>
-                    <h4>Techniques for CSS Layout</h4>
-                    <p>The vast majority of web pages use the CSS float property for layout</p>
-                </div>
-                <div class="panel-footer">
-                    p 250;
-                </div>
-        </div></div>
-        <div  id="ch12-section3"><div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        Layout Strategies
-                    </h3>
-                </div>
-                <div class="panel-body">
-                    <ul>
-                        <li>Start with Your Content</li>
-                        <li>Mobile First.Mobile First design is about starting with your content, but it’s also about getting rid of extraneous noise— including supplementary information that fits fine on a large desktop screen, but merely gets in the way on the smaller screen and detracts from the key information you’re hoping to deliver.</li>
-                        <li>css 3 lyaout options
+    <div class="row">
+        <div class="col-md-9">
+            <section id="ch12">
+                <h1>Chapter 12: Introducint CSS Layouts</h1>
+                <div  id="ch12-section1"><div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Types of Web Page Layouts
+                            </h3>
+                        </div>
+                        <div class="panel-body">
                             <ul>
-                                <li>multicolumn layout module</li>
-                                <li>flexible box <p>https://css-tricks.com/snippets/css/a-guide-to-flexbox/</p></li>
-                                <li>grid layout</li>
+                                <li>fixed width. use fixed with like 960px</li>
+                                <li>liquid. user percentage</li>
+                                <li>Responsive web design. Instead of presenting a single layout for all devices, responsive web design compensates for di erent browser widths by changing its presentation. mainly use media queries</li>
                             </ul>
-                        </li>
-                        <li>Start with a Sketch</li>
-                        <li>Identify the Boxes</li>
-                        <li>Go with the Flow</li>
-                        <li>Remember Background Images</li>
-                        <li>Pieces of a Puzzle</li>
-                        <li>Layering Elements</li>
-                        <li>Don’t Forget Margins and Padding</li>
-                    </ul>
+                        </div>
+                        <div class="panel-footer">
+                        </div>
+                </div></div>
+                <div  id="ch12-section2"><div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                How CSS Layout Works
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <h4>
+                                using div when no other semanticly more appropriate tag available
+                            </h4>
+                            <h4> HTML 5 Sectioning Elements </h4>
+                            <p>the new HTML5 elements are intended to add seman- tics to a web page</p>
+                            <h4>Techniques for CSS Layout</h4>
+                            <p>The vast majority of web pages use the CSS float property for layout</p>
+                        </div>
+                        <div class="panel-footer">
+                            p 250;
+                        </div>
+                </div></div>
+                <div  id="ch12-section3"><div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Layout Strategies
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li>Start with Your Content</li>
+                                <li>Mobile First.Mobile First design is about starting with your content, but it’s also about getting rid of extraneous noise— including supplementary information that fits fine on a large desktop screen, but merely gets in the way on the smaller screen and detracts from the key information you’re hoping to deliver.</li>
+                                <li>css 3 lyaout options
+                                    <ul>
+                                        <li>multicolumn layout module</li>
+                                        <li>flexible box <p>https://css-tricks.com/snippets/css/a-guide-to-flexbox/</p></li>
+                                        <li>grid layout</li>
+                                    </ul>
+                                </li>
+                                <li>Start with a Sketch</li>
+                                <li>Identify the Boxes</li>
+                                <li>Go with the Flow</li>
+                                <li>Remember Background Images</li>
+                                <li>Pieces of a Puzzle</li>
+                                <li>Layering Elements</li>
+                                <li>Don’t Forget Margins and Padding</li>
+                            </ul>
+                        </div>
+                        <div class="panel-footer">
+                            p 250;
+                        </div>
+                </div></div>
+            </section>
+            <hr>
+            <section id="ch13">
+                <h1>Chapter 13:Building Float- Based Layouts : p417</h1>
+                <div id="ch13-section0">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                Introduction
+                            </h2>
+                        </div>
+                        <div class="panel-body">
+                            <p>using float to place element sibe by side</p>
+                            <h4>A simple two-column design like Figure 13-1 in page 418</h4>
+                            <ol>
+                                <li> warp each column in a &lt;div&lg; tag with an ID or class attribute</li>
+                                <li> Float the sidebar &lt;div&gt; either right or left. (The HTML for the floated element must appear before the HTML for the element that wraps around it.)</li>
+                                <li>Set a width for the floated sidebar. pixel or percentage</li>
+                                <li>Add a left margin to the main content.(If the sidebar is shorter than the other content on the page, the text from the main column wraps underneath the sidebar, ruining the look of two side-by-side columns Figure 13-16 p452)</li>
+                            </ol>
+                        </div>
+                        <div class="panel-footer">
+                            p 140;
+                        </div>
+                    </div>
                 </div>
-                <div class="panel-footer">
-                    p 250;
-                </div>
-        </div></div>
-</section>
-    <hr>
-    <section id="ch13">
-        <h1>Chapter 13:Building Float- Based Layouts : p417</h1>
-        <div id="ch13-section0">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h2 class="panel-title">
-                            Introduction
-                        </h2>
-                    </div>
-                    <div class="panel-body">
-                        <p>using float to place element sibe by side</p>
-                        <h4>A simple two-column design like Figure 13-1 in page 418</h4>
-                        <ol>
-                            <li> warp each column in a &lt;div&lg; tag with an ID or class attribute</li>
-                            <li> Float the sidebar &lt;div&gt; either right or left. (The HTML for the floated element must appear before the HTML for the element that wraps around it.)</li>
-                            <li>Set a width for the floated sidebar. pixel or percentage</li>
-                            <li>Add a left margin to the main content.(If the sidebar is shorter than the other content on the page, the text from the main column wraps underneath the sidebar, ruining the look of two side-by-side columns Figure 13-16 p452)</li>
-                        </ol>
-                    </div>
-                    <div class="panel-footer">
-                        p 140;
+                <div id="ch13-section1">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                Applying Floats to Your Layouts : p421
+                            </h2>
+                        </div>
+                        <div class="panel-body">
+                            <h4>Expanding two-column to a three-column design</h4>
+                            <p>see FIGURE 13-3 in page 421</p>
+                            <h4>Floating All Columns</h4>
+                            <p>When you float all columns in a design, you need to pay close attention to the widths of each column. If the total width of all the columns is less than the space available—for example, if the browser window is smaller or the columns are placed inside another &lt;div&gt; with a set width—then the last column drops down below the others.<span class="text-todo"> (You can read a solution to this dropping float problem on page 480.)</span></p>
+                            <h4>Floats Within Floats: p424 figure 13-5</h4>
+                            <p class="text-info">By nesting floats inside floats, you can create some very complex designs</p>
+                        </div>
+                        <div class="panel-footer">
+                            p 140;
+                        </div>
                     </div>
                 </div>
-        </div>
-        <div id="ch13-section1">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h2 class="panel-title">
-                            Applying Floats to Your Layouts : p421
-                        </h2>
-                    </div>
-                    <div class="panel-body">
-                        <h4>Expanding two-column to a three-column design</h4>
-                        <p>see FIGURE 13-3 in page 421</p>
-                        <h4>Floating All Columns</h4>
-                        <p>When you float all columns in a design, you need to pay close attention to the widths of each column. If the total width of all the columns is less than the space available—for example, if the browser window is smaller or the columns are placed inside another &lt;div&gt; with a set width—then the last column drops down below the others.<span class="text-todo"> (You can read a solution to this dropping float problem on page 480.)</span></p>
-                        <h4>Floats Within Floats: p424 figure 13-5</h4>
-                        <p class="text-info">By nesting floats inside floats, you can create some very complex designs</p>
-                    </div>
-                    <div class="panel-footer">
-                        p 140;
-                    </div>
-                </div>
-        </div>
-        <div id="ch13-section2">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h2 class="panel-title">
-                            overcoming Float Problems : p425
-                        </h2>
-                    </div>
-                    <div class="panel-body">
-                        <h4 class="section">Clearing and Containing Floats: p426 Figure 13-6</h4>
-                        <p class="text-danger">To make the footer stay down below the sidebars, you can use the clera property. this property prevents an element from wrapping around floats.</p>
+                <div id="ch13-section2">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                overcoming Float Problems : p425
+                            </h2>
+                        </div>
+                        <div class="panel-body">
+                            <h4 class="section">Clearing and Containing Floats: p426 Figure 13-6</h4>
+                            <p class="text-danger">To make the footer stay down below the sidebars, you can use the clera property. this property prevents an element from wrapping around floats.</p>
                         <pre>footer {clear:both;}</pre>
-                        <p class="text-danger">Another problem occurs when you float one or more elements inside a non-floated containing tag like a &lt;div&gt; tag.</p>
-                        <p class="text-info">When the floated element is taller than the other content inside the div, it sticks out of the bottom of the enclosing element. </p>
-                        <ul>
-                            <li>Add a clearing element at the bottom of the containing div <pre>
+                            <p class="text-danger">Another problem occurs when you float one or more elements inside a non-floated containing tag like a &lt;div&gt; tag.</p>
+                            <p class="text-info">When the floated element is taller than the other content inside the div, it sticks out of the bottom of the enclosing element. </p>
+                            <ul>
+                                <li>Add a clearing element at the bottom of the containing div <pre>
 br.clear{clear:both;}
 </pre></li>
                             <li>Float the containing element. P432: Figure 13-9</li>
@@ -163,51 +163,79 @@ br.clear{clear:both;}
                         p 140;
                     </div>
                 </div>
-        </div>
-    </section>
-    <hr>
-    <section id="ch14">
-        <h1>Chapter 14 Responsive Web Design</h1>
-        <div id="ch14-section1">
+            </div>
+        </section>
+        <hr>
+        <section id="ch14">
+            <h1>Chapter 14 Responsive Web Design</h1>
+            <div id="ch14-section1">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h2 class="panel-title">
                             Responsive Web Design Basics
                         </h2>
                     </div>
-                    <div class="panel-body"></div>
+                    <div class="panel-body">
+                        Responsive web design means design your website so as to be able to display different appearance according to the width of the device display
+                        <p>Re-sponsive web design, or RWD for short, lets you change the entire layout of a page based on browser window width (among other factors), so you can create the most readable presentation for each device, without having to create multiple versions of the same website.</p>
+                        <p> Since smartphone screens come in a wide variety of widths, it makes no sense to create a page at a fixed width; instead, you want the page to grow or shrink to fit the particular device (this is the liquid layout concept discussed on page 450)</p>
+                    </div>
                     <div class="panel-footer">
                         p 140;
                     </div>
                 </div>
-        </div>
-        <div id="ch14-section2">
+            </div>
+            <div id="ch14-section2">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h2 class="panel-title">
-                        Setting Up a Web Page for RWD
+                            Setting Up a Web Page for RWD
                         </h2>
                     </div>
-                    <div class="panel-body"></div>
+                    <div class="panel-body">
+                        <p>phone browsers usually zoom out to to fit the page on screen</p>
+                        <p>to tackle this, use code below in &lt;head&gt; tag</p>
+                    <pre>    &lt;meta name="viewport" content="width=device-width"&gt;</pre>
+                        <p>or the css</p>
+                    <pre> @viewport { width: device-width; }</pre>
+
+                    </div>
                     <div class="panel-footer">
-                        p 140;
+                        p 457;
                     </div>
                 </div>
-        </div>
-        <div id="ch14-section3">
+            </div>
+            <div id="ch14-section3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h2 class="panel-title">
                             Media Queries
                         </h2>
                     </div>
-                    <div class="panel-body"></div>
+                    <div class="panel-body">
+                        <p>CSS3 includes a concept called media queries, which let you assign styles to a page based on the destination browser’s width and height.</p>
+                        <p>The whole point of responsive design is to give your site’s visitors the most readable and attractive presentation possible. </p>
+                        <h4>Strategies for Using Media Queries</h4>
+                        <ul>
+                            <li>Adjust columns.</li>
+                            <li>Flexible widths.</li>
+                            <li>Tighten up white space</li>
+                            <li>Adjust font sizes.</li>
+                            <li>Changing navigation menus.</li>
+                            <li>Hide content on handheld devices</li>
+                        </ul>
+                        <h3>Creating Breakpoints : p 456</h3>
+                        <p>Media queries let you send di erent styles to browsers based on their screen widths. For example, you can tell a browser “If your screen is no larger than 480 pixels, apply these styles,” or, “If your screen is more than 480 pixels but less than 769 pixels, then use these styles.” The di erent width values you specify—480, 769, and so on—are often called breakpoints in responsive design. Basically, at which value does the design start to break down?</p>
+                        <p>It’s common to create three sets of media queries for three di erent breakpoints—one for smartphones, one for tablets, and one for desktop monitors.</p>
+                        <h4>Desktop First or Mobile First</h4>
+                        <p>Another thing to consider is which device are you designing for first? You don’t need to create three separate sets of styles, one for each width device you’re targeting. You can, and should, start with a default design; that is, a design that works without media queries. You can then create media query styles to override the default styles and reformat the page for the particular screen width. There are two main approaches:</p>
+                    </div>
                     <div class="panel-footer">
                         p 140;
                     </div>
                 </div>
-        </div>
-        <div id="ch14-section4">
+            </div>
+            <div id="ch14-section4">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h2 class="panel-title">
@@ -219,8 +247,8 @@ br.clear{clear:both;}
                         p 140;
                     </div>
                 </div>
-        </div>
-        <div id="ch14-section5">
+            </div>
+            <div id="ch14-section5">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h2 class="panel-title">
@@ -232,9 +260,9 @@ br.clear{clear:both;}
                         p 140;
                     </div>
                 </div>
-        </div>
-    </section>
-    <hr>
+            </div>
+        </section>
+        <hr>
         <section id="ch15">
             <h1>Positioning element on a web page</h1>
             <div id="ch15-section0">
@@ -255,18 +283,18 @@ br.clear{clear:both;}
                         <p>Absolutely positioned elements are completely detached from the flow of the page as determined by the HTML code. In other words, other things on the page don’t even know the absolutely positioned element exists. They can even disappear completely underneath absolutely positioned items, if you’re not careful.</p>
                         <h4>Relative : p488</h4>
                         <p>
-Relative. A relatively positioned element is placed relative to its current position in the HTML flow. So, for example, setting a top value of 20 pixels and left value of 200 pixels on a relatively positioned headline moves that headline 20 pixels down and 200 pixels from the left from wherever it would normally appear.
+                            Relative. A relatively positioned element is placed relative to its current position in the HTML flow. So, for example, setting a top value of 20 pixels and left value of 200 pixels on a relatively positioned headline moves that headline 20 pixels down and 200 pixels from the left from wherever it would normally appear.
                         </p>
                         <h4>Fixed: p488</h4>
                         <p>
- A fixed element is locked into place on the screen. Positioning relative to the viewport or the browser window It does the same thing as the fixed value for the background-attachment property (page 579). When a visitor scrolls the page, fixed elements remain onscreen as paragraphs and headlines, while photos disappear o  the top of the browser window.
+                            A fixed element is locked into place on the screen. Positioning relative to the viewport or the browser window It does the same thing as the fixed value for the background-attachment property (page 579). When a visitor scrolls the page, fixed elements remain onscreen as paragraphs and headlines, while photos disappear o  the top of the browser window.
                         </p>
                         <h4>Static: p489</h4>
                         <p>
-Static positioning simply means the content follows the normal top-down flow of HTML (see Figure 15-1, top). Why would you want to assign an element static positioning? The short answer: You probably never will.
+                            Static positioning simply means the content follows the normal top-down flow of HTML (see Figure 15-1, top). Why would you want to assign an element static positioning? The short answer: You probably never will.
                         </p>
                         <p>
-Static is the normal positioning method, it's mainly used to override previously create style that already has a position of absolute, relative or fixed
+                            Static is the normal positioning method, it's mainly used to override previously create style that already has a position of absolute, relative or fixed
                         </p>
                         <pre>
 position : absolute, relative, fixed, static
@@ -286,24 +314,24 @@ p491 : Figure 15-2
 }
 </pre>
 
-                    <hr>
-                    <h4>When absolute positioning is relative: 493</h4>
-                    <p> Eg : p493 relative to first positioned ancestor</p>
-                    <ul>
-                        <li>
-                            A tag is positioned relative to the browser window if it has an absolute posi- tion and it’s not inside any other tag that has either absolute, relative, or fixed positioning applied to it.
-                        </li>
-                        <li>
-                            A tag is positioned relative to the edges of another element if it’s inside another tag with absolute, relative, or fixed positioning.
+                        <hr>
+                        <h4>When absolute positioning is relative: 493</h4>
+                        <p> Eg : p493 relative to first positioned ancestor</p>
+                        <ul>
+                            <li>
+                                A tag is positioned relative to the browser window if it has an absolute posi- tion and it’s not inside any other tag that has either absolute, relative, or fixed positioning applied to it.
+                            </li>
+                            <li>
+                                A tag is positioned relative to the edges of another element if it’s inside another tag with absolute, relative, or fixed positioning.
 
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
 
-                    <h4>When (and Where) to Use Relative Positioning</h4>
-                    <p>You get one big benefit from placing an element relative to another tag: like a logo positioned relative to a h1</p>
-                    <p>A better way to use relativfe positioning is to create a new positioning context for nested tags</p>
-                    <p>think of the relative value as meaning "relative to me". when you apply relative positioning to a tag, it means "all positioned elements inside of me should be positioned relative to my location"</p>
-                    <pre>
+                        <h4>When (and Where) to Use Relative Positioning</h4>
+                        <p>You get one big benefit from placing an element relative to another tag: like a logo positioned relative to a h1</p>
+                        <p>A better way to use relativfe positioning is to create a new positioning context for nested tags</p>
+                        <p>think of the relative value as meaning "relative to me". when you apply relative positioning to a tag, it means "all positioned elements inside of me should be positioned relative to my location"</p>
+                        <pre>
 // p496: figure 15-5
 h1 {position: relative}
 h1 img{
@@ -312,16 +340,16 @@ h1 img{
     right: 0;
 }
                     </pre>
-                    <h4>Stacking Elements</h4>
-                    <p>z-index | page 497 : figure 15-6</p>
-                    <h4>Hiding Parts of a Page</h4>
-                    <pre>
+                        <h4>Stacking Elements</h4>
+                        <p>z-index | page 497 : figure 15-6</p>
+                        <h4>Hiding Parts of a Page</h4>
+                        <pre>
 display:none;
 visibility : none; //these two almost the same except visibility leaves a empty hole in the place. when use absolute position, these two has no difference;
 opacity: 0;
 
                     </pre>
-                    <pre>
+                        <pre>
 &lt;figure class="hat"&gt;
 &lt;img src="hat.jpg" width="100" height="100"&gt;
 &lt;figcaption&gt;A picture of a hat&lt;/figcaption&gt;
@@ -344,21 +372,21 @@ opacity: 0;
      display: block;
 }
                     </pre>
-                    </div>
-                    <div class="panel-footer">
-                        p 140;
-                    </div>
                 </div>
-                
+                <div class="panel-footer">
+                    p 140;
+                </div>
             </div>
-            <div id="ch15-section2">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
+
+        </div>
+        <div id="ch15-section2">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
                         Powerful Positioning Strategies
-                        </h3>
-                    </div>
-                    <div class="panel-body">
+                    </h3>
+                </div>
+                <div class="panel-body">
                     <h4>Positioning Within an Element</h4>
                     <p>The &lt;span&gt; tag is a popular choice for applying a class to a chunk of inline text to style it independently from the rest of a paragraph.</p>
                     <pre>
@@ -404,7 +432,7 @@ h1 img {
                         <li>Addyourmaterialtoeach&lt;div&gt;.</li>
                         <li>Create styles for all fixed elements.
 
-                        <pre>
+                            <pre>
 .banner {
        position: fixed;
        left: 0;
@@ -425,64 +453,85 @@ h1 img {
 }
                         </pre>
 
-                        </li>
-                        <li>Create the style for the scrollable content area.
+                    </li>
+                    <li>Create the style for the scrollable content area.
                         <pre>
 .main {
       margin-left: 190px;
       margin-top: 110px;
 }
                         </pre>
-                        
-                        </li>
-                    </ul>
-                    </div>
-                    <div class="panel-footer">
-                        p 140;
-                    </div>
-                </div>
-            </div>
-    </section>
-    </div>
 
-    <div class="col-md-3 manuscript-sidebar" id="myScrollspy">
-        <ul class="nav nav-stacked" data-offset-top="80" data-spy="affix">
-            <li>
-                <a href="#ch12">chapter 12: Introducint CSS Layout</a>
-                <ul class="nav nav-stacked">
-                    <li><a href="#ch12-section1">Types of Web Page Layouts</a></li>
-                    <li><a href="#ch12-section2">Start with a Sketch</a></li>
-                    <li><a href="#ch12-section3">Layout Strategies</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#ch13">chapter 13: Building Float Based Layouts</a>
-                <ul class="nav nav-stacked">
-                    <li><a href="#ch13-section0">Introduction</a></li>
-                    <li><a href="#ch13-section1">Applying Floats to Your Layouts</a></li>
-                    <li><a href="#ch13-section2">Overcoming FLoat Problems</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#ch14">chapter 14: Responsive Web Design</a>
-                <ul class="nav nav-stacked">
-                    <li><a href="#ch14-section1">Responsive Web Design Basics</a></li>
-                    <li><a href="#ch14-section2">Setting Up a Web Page for RWD</a></li>
-                    <li><a href="#ch14-section3">Media Queries</a></li>
-                    <li><a href="#ch14-section4">Flexible Grids</a></li>
-                    <li><a href="#ch14-section5">Fluid Images</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#ch15">chapter 15: Positioning Elment On a Web Page</a>
-                <ul class="nav nav-stacked"> 
-                    <li><a href="#ch15-section0">Introduction</a></li>
-                    <li><a href="#ch15-section1">How Positioning property works</a></li>
-                    <li><a href="#ch15-section2">Powerful Positioning Strategies</a></li>
-                </ul>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="panel-footer">
+            p 140;
+        </div>
     </div>
+</div>
+    </section>
+    <section id="review">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Review
+                </h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>Positioning</li>
+                    <li>media query</li>
+                    <li>liquid layout</li>
+                    <li>float</li>
+                </ul>
+            </div>
+            <div class="panel-footer">
+                p 140;
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="col-md-3 manuscript-sidebar" id="myScrollspy">
+    <ul class="nav nav-stacked" data-offset-top="80" data-spy="affix">
+        <li>
+            <a href="#ch12">chapter 12: Introducint CSS Layout</a>
+            <ul class="nav nav-stacked">
+                <li><a href="#ch12-section1">Types of Web Page Layouts</a></li>
+                <li><a href="#ch12-section2">Start with a Sketch</a></li>
+                <li><a href="#ch12-section3">Layout Strategies</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#ch13">chapter 13: Building Float Based Layouts</a>
+            <ul class="nav nav-stacked">
+                <li><a href="#ch13-section0">Introduction</a></li>
+                <li><a href="#ch13-section1">Applying Floats to Your Layouts</a></li>
+                <li><a href="#ch13-section2">Overcoming FLoat Problems</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#ch14">chapter 14: Responsive Web Design</a>
+            <ul class="nav nav-stacked">
+                <li><a href="#ch14-section1">Responsive Web Design Basics</a></li>
+                <li><a href="#ch14-section2">Setting Up a Web Page for RWD</a></li>
+                <li><a href="#ch14-section3">Media Queries</a></li>
+                <li><a href="#ch14-section4">Flexible Grids</a></li>
+                <li><a href="#ch14-section5">Fluid Images</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#ch15">chapter 15: Positioning Elment On a Web Page</a>
+            <ul class="nav nav-stacked"> 
+                <li><a href="#ch15-section0">Introduction</a></li>
+                <li><a href="#ch15-section1">How Positioning property works</a></li>
+                <li><a href="#ch15-section2">Powerful Positioning Strategies</a></li>
+            </ul>
+        </li>
+        <li><a href="#review">Review</a></li>
+    </ul>
+</div>
 </div>
         </div>
 
@@ -490,4 +539,4 @@ h1 img {
 
             <a href="#top" style="font-size: 16px; line-height: 36px; color:#1f86ed; display:block;" >Top</a>
         </div>
-@endsection
+        @endsection

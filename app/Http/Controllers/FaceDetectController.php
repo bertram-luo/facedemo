@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class DemoController extends Controller
+class FaceDetectController extends Controller
 {
     public function index(){
         return view("demo");
