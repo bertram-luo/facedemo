@@ -22,7 +22,7 @@ class FaceDetectController extends Controller
 
             //$uploadroot = '/opt/lampp/htdocs/';
             $uploadroot = base_path(). '/public/';
-            $uploaddir = 'uploads/';
+            $uploaddir = 'photos/facedetect/';
             foreach($_FILES as $file)
             {
                 $des_file = $uploaddir .$this->get_des_name($file['name']);

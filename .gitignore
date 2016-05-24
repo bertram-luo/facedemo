@@ -1,13 +1,14 @@
 /vendor
 /node_modules
-/public/storage
 Homestead.yaml
 Homestead.json
 /storage/cache/*
 /storage/session/*
 /storage/views/*
+/public/storage
 /public/build
 /public/uploads
+/public/photos/flyers/*
+/public/photos/facedetect/*
 /public/log
 *.swp
-/public/photos/*

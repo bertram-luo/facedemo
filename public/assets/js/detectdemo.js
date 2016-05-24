@@ -15,7 +15,7 @@ $(function(){
             data.append(key, value);
         });
         $.ajax({
-            url: '/demo/process?files',
+            url: '/facedetect/process?files',
             beforeSend: function (request)
             {
                 request.setRequestHeader("X-CSRF-TOKEN",$('input[name=_token]').val());
