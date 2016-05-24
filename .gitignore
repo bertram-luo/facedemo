@@ -10,3 +10,4 @@ Homestead.json
 /public/uploads
 /public/log
 *.swp
+/public/photos/*
