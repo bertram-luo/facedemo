@@ -229,6 +229,81 @@ br.clear{clear:both;}
                         <p>It’s common to create three sets of media queries for three di erent breakpoints—one for smartphones, one for tablets, and one for desktop monitors.</p>
                         <h4>Desktop First or Mobile First</h4>
                         <p>Another thing to consider is which device are you designing for first? You don’t need to create three separate sets of styles, one for each width device you’re targeting. You can, and should, start with a default design; that is, a design that works without media queries. You can then create media query styles to override the default styles and reformat the page for the particular screen width. There are two main approaches:</p>
+                        <ul>
+                            <li>Desktop First</li>
+                            <li>Mobile First</li>
+                        </ul>
+                        <p>start with one set that applies across phones, tablets, and desktop browsers, then refine the design for the media query-targeted devices.</p>
+                        <h4>Creating Media Queries</h4>
+                        <pre>&lt;link href="css/small.css" rel="stylesheet" media="(width: 480px)"&gt;</pre>
+                        <pre>&lt;link href="css/small.css" rel="stylesheet" media="(max-width:480px)"&gt;</pre>
+                        <pre>&lt;link href="css/large.css" rel="stylesheet" media="(min-width:769px)"&gt;</pre>
+                        <pre>&lt;link href="css/medium.css" rel="stylesheet" media="(min-width:481px) and(max-width:768px)"&gt;</pre>
+                        <p> media query can also query orientation height, color or monochrome screen</p>
+                        <h4>Including Queries Inside a Stylesheet</h4>
+                        <ul>
+                            <li>Use the @import directive. 
+                            <pre>
+@import url(css/small.css) (max-width:320px);
+@import url(css/base.css); /* no media query, applies to all */
+@import url(css/medium.css) (min-width:481px) and (max-width:768);
+@import url(css/small.css) (max-width: 480px);
+                            </pre></li>
+                            <li>Embed the media query in the style sheet.
+                           <pre>
+@media (max-width: 480px) {
+        body {
+           /*style properties go here*/
+        }
+       .style1 {
+           /*style properties go here*/
+} }
+</pre> </li>
+                        </ul>
+                        <h4>A Basic Stylesheet Structure</h4>
+                        <pre>
+
+/* Put your reset styles here */
+     /* Put styles for desktop and basic styles for all devices here */
+     body {
+       /* properties for body here */
+     }
+     /* medium display only */
+     @media (min-width: 481px) and (max-width:768px) {
+       body {
+         /* properties that only apply to tablets */
+}
+     }
+     /* small display only */
+     @media (max-width:480px) {
+       body {
+         /* properties that only apply to phones */
+} }
+                        </pre>
+                        <h4>Mobile First</h4>
+                        <pre>
+
+ /* Put your reset styles here */
+ /* Put styles for mobile and basic styles for all devices here*/
+ body {
+   /* properties for body here */
+ }
+ /* medium display only */
+ @media (min-width: 481px) and (max-width:768px) {
+   body {
+     /* properties that only apply to tablets */
+    }
+}
+
+/* large display only */
+@media (min-width:769px) {
+    body {
+         /* properties that only apply to phones */
+    }
+}
+
+
+                        </pre>
                     </div>
                     <div class="panel-footer">
                         p 140;
