@@ -21,11 +21,11 @@
         </div>
         </form>
     </div>
-@if(Session::has('back'))
- "fucking you back";
+{{-- @if(Session::has('back'))
+ "you back";
 @else
-  "fuckint not working"
-@endif
+  "currently not working"
+@endif --}}
 
   @if (count($tasks) > 0)
         <div class="panel panel-default">

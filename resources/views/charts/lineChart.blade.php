@@ -11,12 +11,12 @@
             labels : ['1', '2', '3'],
             datasets: [
                 {
-                    label: "fuck you",
+                    label: "type1",
                     backgroundColor:"rgba(100, 220, 220, 0.2)",
                     data : [30, 20, 100],
                 },
                 {
-                    label: "fuck me",
+                    label: "type2",
                     data : [30, 200, 100],
                 }
             ]

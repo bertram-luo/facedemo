@@ -15,6 +15,8 @@ class FaceDetectController extends Controller
     public function process(){
         $data = array();
 
+        $uploadroot = base_path(). '/public/';
+        $uploaddir = 'uploads/';
         if(isset($_GET['files']))
         {	
             $error = false;
@@ -31,7 +33,7 @@ class FaceDetectController extends Controller
                     $res_file = $des_file.".jpg";
                     $files[] = "/".$res_file;
 
-                    $shell_cmd = "export LD_LIBRARY_PATH=\"\" && cd /home/parallels/third-src/opencv/samples/cpp && ./cpp-example-facedetect --res=$uploadroot$res_file $uploadroot$des_file";
+          	    $shell_cmd = "export LD_LIBRARY_PATH=\"\" && cd /root/opencv/opencv-3.0.0/samples/cpp && ./cpp-example-facedetect --res=$uploadroot$res_file $uploadroot$des_file";
                     shell_exec($shell_cmd);
 
                 }
@@ -47,8 +49,8 @@ class FaceDetectController extends Controller
             $data = array('success' => 'Form was submitted', 'formData' => $_POST);
         }
 
-        file_put_contents("./log", json_encode($data)."\n", FILE_APPEND);
-        $this->output->set_header('Content-Type: application/json; charset=utf-8');
+        //file_put_contents("./log", json_encode($data)."\n", FILE_APPEND);
+        //$this->output->set_header('Content-Type: application/json; charset=utf-8');
         echo json_encode($data);
     }
 
