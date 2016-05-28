@@ -84,6 +84,58 @@
                         <h4>A class should only have one, </h4>
                         <h4>And only one </h4>
                         <h4>Reason to change</h4>
+<pre>
+class SalesReporter{
+    public function between($startDate, $endDate){
+            $sales = $this->queryDBForSalesBetween($startDate, $endDate);
+            return $this->format($sales);
+    }
+    public function queryDBforSalesBetween($startDate, $endDate){
+        return DB::table('sales')
+            ->whereBetween('created_at', [$startDate, $endDate])
+            ->sum('charge')/ 100;
+    }
+    public function format($sales){
+        return "&lt;h1&gt;$sales&lt;/h1&gt;";
+    }
+}
+</pre>
+<pre>
+class SalesRepository{
+    public function between($startDate, $endDate){
+        return DB::table('sales')
+            ->whereBetween('created_at', [$startDate, $endDate])
+            ->sum('charge')/ 100;
+    }
+}
+
+interface SalesOutputInterface{
+    public function output($sales);
+}
+
+class HtmlOutput implements SalesOutputInterface{
+    public function output($sales){
+        return "&lt;h1&gt;Sales: $sales&lt;/h1&gt;";
+    }
+}
+
+class SalesReporter{
+    protected $repo;
+    public function __construct(SalesRepository $repo){
+        $this->repo = $repo;
+    }
+    public function between($startDate, $endDate,
+        SalesOutputInterface $formatter){
+        $sales = $this
+            ->repo
+            ->between($startDate, $endDate);
+        return $formatter->output($sales);
+    }
+}
+// each class should has only one responsibility
+</pre>
+
+
                         </div>
                         <div class="panel-footer">
                             p 140;
@@ -101,6 +153,81 @@
                             <h4>Entities should be</h4>
                             <h4>open for extension</h4>
                             <h4>but closed for modification</h4>
+<hr>
+
+<pre>
+class Circle{
+    protected $radius;
+    public function __construct($radius){
+        $this->radius = $radius;
+    }
+}
+
+class Square{
+    protected $height;
+    protected $width;
+    public function __construct($width, $height){
+        $this->height = $height;
+        $this->width = $width;
+    }
+}
+
+class Triangle{
+    // blablabla
+}
+
+class AreaCalculator{
+    public function calculate($squares){
+        foreach($squares as $shape){
+            if ($shape instanceof Square){
+                $area[] = $area->width * $area->height;
+            } else if ($shape instanceof Circle){
+                $area[] = $shape->radius * $shape->radius * pi();
+            }
+        }
+        return array_sum($area);    
+    }
+}
+</pre>
+
+<hr>
+<pre>
+interface Shape{
+    public function area();
+}
+
+class Circle implements Shape{
+    protected $height;
+    protected $width;
+    public function __construct($width, $height){
+        $this->height = $height;
+        $this->width = $width;
+    }
+    public function area(){
+        return $this->height * $this->width;
+    }
+}
+
+class Square implements Shape{
+    protected $radius;
+    public function __construct($radius){
+        $this->radius = $radius;
+    }
+    public function area(){
+        return $this->radius * $this->radius * pi();
+    }
+}
+
+class AreaCalculator{
+    public function calculate($shapes){
+        foreach($shapes as $shape){
+            $ares[] = $shape->area();
+        }
+        return array_sum($area);
+    }
+}
+</pre>
+
                         </div>
                         <div class="panel-footer">
                             p 140;
@@ -118,6 +245,22 @@
                             <h4>Let q(x) be a property provable about object x of type T</h4>
                             <h4>Then q(y) should be provable for object y of type S</h4>
                             <h4>Where S is subtype of T </h4>
+
+<pre>
+class VideoPlayer{
+    public function play($file){
+        
+    }
+}
+
+class AviVideoPlayer extends VideoPlayer{
+    public function play($file){
+        if (pathinfo($file, PATHINFO_EXTENSION) !== 'avi'){ // called the precondition
+            throw \Exception;// violates the LSP
+        }
+    }
+}
+</pre>
                         </div>
                         <div class="panel-footer">
                             p 140;
@@ -134,6 +277,132 @@
                         <div class="panel-body">
                             <h4>a client should not be forced to</h4>
                             <h4>implement an interface that it doesn’t use</h4>
+                            <hr>
+<pre>
+class Worker{
+    public function work(){
+        
+    }
+    public function sleep(){
+        
+    }
+}
+
+class Caption{
+    public function manage(Worker $worker){
+        $worker->work();
+        $worker->sleep();
+    }
+}
+</pre>
+
+<pre>
+interface Worker{
+    public function work();
+    public function sleep();
+}
+
+class HumanWorker implements Worker{
+    public function work(){
+        
+    }
+    public function sleep(){
+        
+    }
+}
+
+class AndroidWorker implements WorkerInterface{
+    public function work(){
+        return 'android working';
+    }
+    public function sleep(){
+        return null;
+    }
+}
+
+class Caption{
+    public function manage(WorkerInterface $worker){
+        $worker->work();
+        $worker->sleep();
+    }
+}
+</pre>
+
+<pre>
+interface WorkableInterface{
+    public function work();
+}
+interface SleepableInterface{
+    public function sleep();
+}
+
+class HumanWorker implements WorkableInterface,
+    SleepableInterface{
+    public function work(){
+        
+    }
+    public function sleep(){
+        
+    }
+}
+
+class AndroidWorker implements WorkableInterface{
+    public function work(){
+        return 'android working';
+    }
+}
+
+class Caption{
+    public function manage(WorkableInterface $worker){
+        $worker->work();
+        if ($worker instanceof AndroidWorkder) return;
+        $worker->sleep();
+    }
+}
+</pre>
+
+<pre>
+interface ManagableInterface{
+    public function beManage();
+}
+interface WorkableInterface{
+    public function work();
+}
+interface SleepableInterface{
+    public function sleep();
+}
+
+class HumanWorker implements WorkableInterface,
+    SleepableInterface,
+    ManagableInterface{
+    public function work(){
+        
+    }
+    public function sleep(){
+        
+    }
+    public function beManaged(){
+        $this->work();
+        $this->sleep();
+    }
+}
+
+class AndroidWorker implements WorkableInterface,
+    ManagableInterface{
+    public function work(){
+        return 'android working';
+    }
+    public function beManaged(){
+        $this->work();
+    }
+}
+
+class Caption{
+    public function manage(ManagableInterface $worker){
+        $worker->beManaged();
+    }
+}
+</pre>
                         </div>
                         <div class="panel-footer">
                             p 140;
@@ -150,6 +419,34 @@
                         <div class="panel-body">
                             <h4>Depend on abstractions, </h4>
                             <h4>Not on concretions</h4>
+
+<pre>
+class PasswordReminder{
+    protected $connection;
+    public function __construct(MysqlConnection $connection){
+        $this->connection = $connection;
+    }
+}
+</pre>
+<pre>
+interface ConnectionInterface{
+    public function connect();
+}
+
+class DbConnection implements ConnectionInterface{
+    public function connect(){
+        // blablable
+    }
+}
+
+class PasswordReminder{
+    protected $connection;
+    public function __construct(DbConnection $connection){
+        $this->connection = $connection;
+    }
+}
+</pre>
+
                         </div>
                         <div class="panel-footer">
                             p 140;
