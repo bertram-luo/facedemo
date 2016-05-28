@@ -317,7 +317,71 @@ br.clear{clear:both;}
                             Flexible Grids
                         </h2>
                     </div>
-                    <div class="panel-body"></div>
+                    <div class="panel-body">
+                    <p>similar to liquid layout</p>
+                    <p>For example, say you want to create a two-column design where the first column is one-third the width of the page and the second is two-thirds. You may start with some simple HTML, like this:</p>
+                    <pre>
+&lt;div class="columns"&gt;
+    &lt;div class="one-third"&gt;
+    ...content goes here...
+    &lt;/div&gt;
+    &lt;div class="two-thirds"&gt;
+    ...content goes here...
+    &lt;/div&gt;
+&lt;/div&gt;
+.columns {
+      width: auto; /* same as 100% */
+      max-width: 1200px;
+}
+    .columns:after {
+      content: "";
+      display: table;
+      clear: both;
+}
+    .one-third {
+      float: left;
+      width: 33%;
+}
+    .two-thirds {
+      float: left;
+      width: 67%;
+}
+                    </pre>
+                    <h4>The Importance of HTML Source Order</h4>
+                    <p>if you create a three-column design for desktop display using floats to position the columns side-by-side, simply set the float property to none on those elements. They then display as HTML normally does—one block-level tag on top of the other.</p>
+                    <p>This makes the HTML source order very important.</p>
+                    <h4>Reset the Box Model</h4>
+                    <pre>
+*{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}</pre>
+                    <h4>Converting Fixed Width to Flexible Grids</h4>
+<pre>
+change from 
+
+.sidebar {
+    float: left;
+    width: 180px;
+}
+.main {
+    float: left;
+    width: 780px;
+}
+
+to
+.sidebar {
+    float: left;
+    width: 18.75%;
+}
+.main {
+    float: left;
+    width: 81.25%;
+}
+</pre>
+                    <p> A width of 25.48488% is perfectly acceptable.</p>
+                    <p>As you recreate your design and figure out percentage values, keep in mind that the total width of all columns in a single row can’t exceed 100%.</p>
+                    </div>
                     <div class="panel-footer">
                         p 140;
                     </div>
@@ -330,7 +394,10 @@ br.clear{clear:both;}
                             Fluid Images
                         </h2>
                     </div>
-                    <div class="panel-body"></div>
+                    <div class="panel-body">
+                    <p>While a flexible layout creates a design that works in a wide range of browser window widths, you’ll encounter a problem if you’ve inserted images in your pages. Although columns in a flexible design shrink as the window gets smaller, images usually don’t. This can lead to graphics overflowing their bounds and no longer fitting within the width of a column (see Figure 14-3).</p>
+                    </div>
+                    <p class="text-todo"> see book p 471</p>
                     <div class="panel-footer">
                         p 140;
                     </div>
