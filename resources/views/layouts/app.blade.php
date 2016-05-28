@@ -71,6 +71,15 @@
                                 <li><a href=""></a></li>
                                 <li><a href=""></a></li>
                             </ul>
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">R talk</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/designpatterns">design patters</a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">

@@ -48,6 +48,9 @@ Route::group(['middlewareGroups' => ['web']], function(){
     Route::delete('photos/{id}', 'PhotosController@destroy');
 
 
+    Route::get('/designpatterns', function(){
+        return view("rshare.designpatterns");
+    });
 
     Route::get('/about', 'PagesController@about');
 });
