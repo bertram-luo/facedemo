@@ -31,14 +31,20 @@ section{
     margin-top : -60px;
 }
 
-div[id^="ch"]{
+div[id^="ch"], div[id^="why"], div[id^='patterns'], div[id^='principles']{
     padding-top:60px;
     margin-top : -60px;
 }
-div[id^="article"]{
-    padding-top:60px;
-    margin-top : -60px;
+
+div.article{
+    display: table;
+    min-height: 600px;
 }
+div.panel-primary{
+    display: table-cell;
+    vertical-align: middle;
+}
+
 
 img{
     max-width: 100%;

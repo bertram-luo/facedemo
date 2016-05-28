@@ -17,7 +17,8 @@ elixir(function(mix) {
         .version('./public/assets/css/app.css')
         .scripts([
             'libs/sweetalert-dev.js',
-            'libs/lity.js'
+            'libs/lity.js',
+            'libs/article.js'
             ], './public/assets/js/libs.js')
         .styles( ['libs/sweetalert.css', 'libs/lity.css', 'libs/manuscript.css'], './public/assets/css/libs.css');
 });
