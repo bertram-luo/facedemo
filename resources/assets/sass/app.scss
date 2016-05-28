@@ -39,6 +39,7 @@ div[id^="ch"], div[id^="why"], div[id^='patterns'], div[id^='principles']{
 div.article{
     display: table;
     min-height: 600px;
+    margin-bottom: 50px;
 }
 div.panel-primary{
     display: table-cell;
