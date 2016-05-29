@@ -36,7 +36,7 @@ class Controller extends BaseController
         $this->viewName[0][3] = "courses.nav_table_form";
         $this->viewName[0][4] = "courses.float_layout_and_positioning_element";
         //$this->viewName[0][4] = "courses.test";
-        $this->viewName[1][0] = "courses.ss_and_selector";
+        $this->viewName[1][0] = "courses.js1";
         $this->viewName[1][1] = "courses.ss_and_selector";
         $this->viewName[2][0] = "courses.basic_js";
         $this->viewName[3][0] = "courses.ss_and_selector";

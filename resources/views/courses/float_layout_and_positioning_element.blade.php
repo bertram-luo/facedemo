@@ -22,7 +22,8 @@
                         <div class="panel-footer">
                         </div>
                 </div></div>
-                <div  id="ch12-section2"><div class="panel panel-primary">
+                <div  id="ch12-section2">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title">
                                 How CSS Layout Works
