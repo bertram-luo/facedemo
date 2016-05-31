@@ -1,7 +1,7 @@
 $(document).ready(function() {
     function setHeight() {
-        windowHeight = $(window).innerHeight();
-        $('.article').css('min-height', windowHeight);
+        slideHeight = $(window).innerHeight() - 70;
+        $('.slide-page').css('min-height', slideHeight);
     };
     setHeight();
 

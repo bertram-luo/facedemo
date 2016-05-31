@@ -1,35 +1,29 @@
 @extends('layouts.app')
 
 @section('content')
-<style>
-.article{
-    width: 100%;
-    height: 100%;
-}
-</style>
 <div class="container">
     <div class="row">
         <div class="col-md-9">
             <section id="why">
-                <div id="why-why" class="article">
-                    <div class="panel panel-primary">
+                <div id="why-why" >
+                    <div class="panel panel-primary slide-page">
                         <div class="panel-heading">
                             <h3 class="panel-title">
                                 Why is design patterns needed
                             </h3>
                         </div>
                         <div class="panel-body">
+                            <div class="content">
                             <ul>
                                 <li>code may be run many times</li>
                                 <li>the functionaly of code may be changed</li>
                             </ul>
-                        </div>
-                        <div class="panel-footer">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div  id="why-what" class="article">
-                    <div class="panel panel-primary">
+                <div  id="why-what">
+                    <div class="panel panel-primary slide-page">
                         <div class="panel-heading">
                             <h3 class="panel-title">
                             What is design patterns
@@ -45,15 +39,13 @@
 <h4>功能<span class="text-todo">变化</span>的能力的</h4>
 <h4>一些常用的架构手法</h4>
                         </div>
-                        <div class="panel-footer">
-                            p 250;
-                        </div>
-                </div></div>
+                    </div>
+                </div>
             </section>
             <hr>
             <section id="principles">
-                <div id="principles-section0" class="article">
-                    <div class="panel panel-primary">
+                <div id="principles-section0" >
+                    <div class="panel panel-primary slide-page">
                         <div class="panel-heading">
                             <h2 class="panel-title">
                                 Principles 
@@ -68,13 +60,10 @@
                                 <li>DIP</li>
                             </ul>
                         </div>
-                        <div class="panel-footer">
-                            p 140;
-                        </div>
                     </div>
                 </div>
-                <div id="principles-section1" class="article">
-                    <div class="panel panel-primary">
+                <div id="principles-section1" >
+                    <div class="panel panel-primary slide-page">
                         <div class="panel-heading">
                             <h2 class="panel-title">
                                 SRP
@@ -137,13 +126,10 @@ class SalesReporter{
 
 
                         </div>
-                        <div class="panel-footer">
-                            p 140;
-                        </div>
                     </div>
                 </div>
-                <div id="principles-section2" class="article">
-                    <div class="panel panel-primary">
+                <div id="principles-section2" >
+                    <div class="panel panel-primary  slide-page">
                         <div class="panel-heading">
                             <h2 class="panel-title">
                             OCP
@@ -229,13 +215,10 @@ class AreaCalculator{
 </pre>
 
                         </div>
-                        <div class="panel-footer">
-                            p 140;
-                        </div>
                     </div>
                 </div>
-                <div id="principles-section3" class="article">
-                    <div class="panel panel-primary">
+                <div id="principles-section3" >
+                    <div class="panel panel-primary  slide-page">
                         <div class="panel-heading">
                             <h2 class="panel-title">
                             LSP
@@ -262,13 +245,10 @@ class AviVideoPlayer extends VideoPlayer{
 }
 </pre>
                         </div>
-                        <div class="panel-footer">
-                            p 140;
-                        </div>
                     </div>
                 </div>
-                <div id="principles-section4" class="article">
-                    <div class="panel panel-primary">
+                <div id="principles-section4" >
+                    <div class="panel panel-primary  slide-page">
                         <div class="panel-heading">
                             <h2 class="panel-title">
                                 ISP
@@ -404,13 +384,10 @@ class Caption{
 }
 </pre>
                         </div>
-                        <div class="panel-footer">
-                            p 140;
-                        </div>
                     </div>
                 </div>
-                <div id="principles-section5" class="article">
-                    <div class="panel panel-primary">
+                <div id="principles-section5" >
+                    <div class="panel panel-primary  slide-page">
                         <div class="panel-heading">
                             <h2 class="panel-title">
                                 DIP
@@ -448,9 +425,6 @@ class PasswordReminder{
 </pre>
 
                         </div>
-                        <div class="panel-footer">
-                            p 140;
-                        </div>
                     </div>
                 </div>
 
@@ -458,8 +432,8 @@ class PasswordReminder{
         <hr>
         <section id="patterns">
             <h1>Original Patterns Proposed by Gang of Four (Eric Gamma...)</h1>
-            <div id="patterns-section1" class="article">
-                <div class="panel panel-primary">
+            <div id="patterns-section1" >
+                <div class="panel panel-primary  slide-page">
                     <div class="panel-heading">
                         <h2 class="panel-title">
                             Creational Patterns
@@ -474,13 +448,10 @@ class PasswordReminder{
                             <li>Singleton</li>
                         </ul>
                     </div>
-                    <div class="panel-footer">
-                        p 140;
-                    </div>
                 </div>
             </div>
-            <div id="patterns-section2" class="article">
-                <div class="panel panel-primary">
+            <div id="patterns-section2" >
+                <div class="panel panel-primary  slide-page">
                     <div class="panel-heading">
                         <h2 class="panel-title">
                             Structual Patterns
@@ -497,13 +468,10 @@ class PasswordReminder{
                             <li>proxy</li>
                         </ul>
                     </div>
-                    <div class="panel-footer">
-                        p 457;
-                    </div>
                 </div>
             </div>
-            <div id="patterns-section3" class="article">
-                <div class="panel panel-primary">
+            <div id="patterns-section3" >
+                <div class="panel panel-primary slide-page">
                     <div class="panel-heading">
                         <h2 class="panel-title">
                             Behavioral patterns
@@ -523,15 +491,12 @@ class PasswordReminder{
                             <li>visitor</li>
                         </ul>
                     </div>
-                    <div class="panel-footer">
-                        p 140;
-                    </div>
                 </div>
             </div>
         </section>
         <hr>
     <section id="reference">
-        <div class="panel panel-primary">
+        <div class="panel panel-primary slide-page">
             <div class="panel-heading">
                 <h3 class="panel-title">
                 Reference
@@ -584,4 +549,8 @@ class PasswordReminder{
         </div>
 
 
+@endsection
+
+@section('scripts.footer')
+<script src="/assets/js/myslides.js"></script>
 @endsection
