@@ -506,7 +506,7 @@ class PasswordReminder{
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h2 class="panel-title">
-                            Media Queries
+                            Behavioral patterns
                         </h2>
                     </div>
                     <div class="panel-body">
@@ -528,55 +528,20 @@ class PasswordReminder{
                     </div>
                 </div>
             </div>
-            <div id="patterns-section4" class="article">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h2 class="panel-title">
-                            Flexible Grids
-                        </h2>
-                    </div>
-                    <div class="panel-body"></div>
-                    <div class="panel-footer">
-                        p 140;
-                    </div>
-                </div>
-            </div>
-            <div id="patterns-section5" class="article">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h2 class="panel-title">
-                            Fluid Images
-                        </h2>
-                    </div>
-                    <div class="panel-body"></div>
-                    <p class="text-todo"> see book p 471</p>
-                    <div class="panel-footer">
-                        p 140;
-                    </div>
-                </div>
-            </div>
         </section>
         <hr>
-        <section id="ch15">
-
-        </section>
-    <section id="review">
+    <section id="reference">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">
-                    Review
+                Reference
                 </h3>
             </div>
             <div class="panel-body">
                 <ul>
-                    <li>Positioning</li>
-                    <li>media query</li>
-                    <li>liquid layout</li>
-                    <li>float</li>
+                    <li>wiki</li>
+                    <li>design patterns</li>
                 </ul>
-            </div>
-            <div class="panel-footer">
-                p 140;
             </div>
         </div>
     </section>
@@ -611,12 +576,7 @@ class PasswordReminder{
             </ul>
         </li>
         <li>
-            <a href="#common"></a>
-            <ul class="nav nav-stacked">
-                <li><a href="#common-section1">Creational Patterns</a></li>
-                <li><a href="#common-section2">Structual Patterns</a></li>
-                <li><a href="#common-section3">Behavioral Patterns</a></li>
-            </ul>
+            <a href="#reference">reference</a>
         </li>
     </ul>
 </div>
